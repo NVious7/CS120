@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keith Van — HTML/CSS Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#0f172a;--muted:#64748b;--border:#e5e7eb;--accent:#0ea5e9;--card:#f8fafc}
+    *{box-sizing:border-box}
+    body{font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:#fff;color:var(--ink)}
+    .wrap{max-width:900px;margin:0 auto;padding:28px}
+    h1{margin:0 0 6px;font-size:clamp(1.9rem,3.4vw,2.3rem)}
+    p.lead{margin:0 0 18px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:8px}
+    .card{border:1px solid var(--border);border-radius:14px;background:#fff}
+    .card > div{padding:16px 18px}
+    .card h3{margin:0 0 6px;font-size:1.05rem}
+    .card p{margin:0 0 10px;color:var(--muted)}
+    .card a{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+    .soon{background:#e2e8f0;color:#0f172a}
+    footer{margin-top:22px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Keith Van</h1>
+    <p class="lead">Mini portfolio for the HTML/CSS module.</p>
+
+    <section class="grid" aria-label="Assignments">
+      <article class="card">
+        <div>
+          <h3>Assignment 1 — cPanel</h3>
+          <p>about_me.html hosted on SiteGround</p>
+          <a href="https://keithanv.sgedu.site/about_me.html" target="_blank" rel="noopener">Open</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div>
+          <h3>Assignment 1 — GitHub</h3>
+          <p>about_me.html hosted on GitHub Pages</p>
+          <a href="https://nvious7.github.io/CS120/About%20Me%20Assignment/about_me.html" target="_blank" rel="noopener">Open</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div>
+          <h3>Assignment 2 — CSS</h3>
+          <p>me_two.html (styled version)</p>
+          <a href="https://keithanv.sgedu.site/me_two.html" target="_blank" rel="noopener">Open</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div>
+          <h3>Project 1</h3>
+          <p>Placeholder page</p>
+          <a class="soon" href="project1.html" target="_blank" rel="noopener">Coming Soon</a>
+        </div>
+      </article>
+    </section>
+
+  </main>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>

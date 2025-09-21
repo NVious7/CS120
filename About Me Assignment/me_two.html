@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me — CSS Practice</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#0f172a; --muted:#64748b; --border:#e5e7eb;
+      --zebra:#f9fbfe; --card:#f8fafc;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:"Inter", Arial, sans-serif;
+      line-height:1.7; margin:20px; color:var(--ink);
+      background:#fff;
+    }
+    .wrap{max-width:980px; margin:0 auto}
+
+    h1,h2{color:#0f172a; margin:0 0 30px}
+    h1{font-size:2.4rem}
+    h2{font-size:1.6rem}
+
+    .list-card{
+      max-width:520px; margin:0 auto 10px; padding:14px 18px;
+      border:2px solid var(--border); border-radius:12px; background:#fff;
+    }
+    .list-card ul{margin:8px 0 0 20px}
+
+    .food-row{display:flex; gap:20px; align-items:stretch; margin-bottom:10px}
+    .food-bg{
+      flex:0 0 320px; min-height:220px; border-radius:12px;
+      background:url("images/tacos.png") center/cover no-repeat;
+      border:2px solid var(--border);
+    }
+    .food-text{
+      flex:1; border:2px solid var(--border); border-radius:12px;
+      background:#fff; padding:14px 16px;
+    }
+
+    table{width:100%; border-collapse:collapse; margin-top:10px}
+    th,td{border:1px solid var(--border); padding:10px; vertical-align:top}
+    th{background:var(--card); text-align:left}
+    tbody tr:nth-child(even){background:var(--zebra)}
+    td img{max-width:120px; height:auto; border-radius:8px; display:block}
+
+    .form-card{margin-top:20px; border:2px solid var(--border); border-radius:12px; padding:16px}
+    .grid{display:grid; grid-template-columns:150px 1fr; gap:10px 16px; align-items:center}
+    label{text-align:right; font-weight:600}
+    input,select{width:100%; padding:10px; border:1px solid var(--border); border-radius:8px; font:inherit}
+    .actions{grid-column:2 / -1}
+    button{padding:10px 14px; border:0; border-radius:10px; background:#0ea5e9; color:#fff; font-weight:600; cursor:pointer}
+
+    @media (max-width:600px){
+      .food-row{flex-direction:column}
+      .food-bg{width:100%; min-height:220px}
+      .grid{grid-template-columns:1fr}
+      label{text-align:left}
+      .actions{grid-column:auto}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Keith Van</h1>
+
+    <h2>Recent Trip</h2>
+    <p>
+      We just got back from a concert trip to Kansas City, and wow—the city was beautiful and the airport was one of the nicest I’ve ever seen. Since we packed everything into a two-day weekend, we didn’t have much time for sightseeing. We flew in early Saturday morning, went straight to the concert check-in, grabbed BBQ at a nearby spot, spent the evening at the show, checked into our hotel, and the next morning hit another famous BBQ place before exploring the airport’s shops and restaurants.
+    </p>
+
+    <h2>My Pets</h2>
+    <div class="list-card">
+      <p style="margin:0 0 6px">I can't pick favorites so here are my pets. We chose Asian-inspired names and kept their adopted names as middle names:</p>
+      <ul>
+        <li>Bao Alice (My Bunny)</li>
+        <li>Kimchi Stormy (My Bunny)</li>
+        <li>Miso Giselle (My Cat)</li>
+        <li>Yuzu Honey (My Kitten)</li>
+      </ul>
+    </div>
+
+    <h2>Favorite Restaurant</h2>
+    <p>
+      My favorite restaurant right now is
+      <a href="https://www.mellowmushroom.com/" target="_blank" rel="noopener noreferrer">Mellow Mushroom</a>
+      because their menu changes seasonally, they have a large drink menu, and plenty of entrée choices depending on your mood.
+    </p>
+
+    <h2>Favorite Food</h2>
+    <section class="food-row" aria-label="favorite food">
+      <div class="food-bg" role="img" aria-label="Tripas tacos on a green picnic table"></div>
+      <div class="food-text">
+        <p><strong>Tripas Tacos (tripe)</strong> are my comfort food. Tripe is a staple in dishes I grew up with as a Vietnamese American, and I love Mexican cuisine. I eat them with just onions and cilantro—absolutely drowned in lime—and nothing else.</p>
+      </div>
+    </section>
+
+    <h2>Some Favorite Books</h2>
+    <table aria-label="Favorite books">
+      <thead>
+        <tr>
+          <th>Book</th>
+          <th>Cover</th>
+          <th>Author</th>
+          <th>1–2 Line Summary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><em>Villains Are Destined to Die</em> (comic series)</td>
+          <td><img src="images/villains.png" alt="Villains Are Destined to Die cover"></td>
+          <td>Gwon Gyeoeul</td>
+          <td>A modern girl is pulled into an otome game as the villainess and must survive deadly routes and romance flags.</td>
+        </tr>
+        <tr>
+          <td><em>milk and honey</em></td>
+          <td><img src="images/milk-honey.png" alt="milk and honey cover"></td>
+          <td>Rupi Kaur</td>
+          <td>Poetry on love, loss, trauma, healing, and femininity in four raw, intimate parts.</td>
+        </tr>
+        <tr>
+          <td><em>Twilight</em></td>
+          <td><img src="images/twilight.png" alt="Twilight cover with hands holding an apple"></td>
+          <td>Stephenie Meyer</td>
+          <td>A human girl falls for a vampire, igniting a dangerous romance and a clash between worlds.</td>
+        </tr>
+        <tr>
+          <td><em>You</em></td>
+          <td><img src="images/you.png" alt="You novel cover by Caroline Kepnes"></td>
+          <td>Caroline Kepnes</td>
+          <td>A bookstore clerk’s obsession spirals into stalking and manipulation—told chillingly from his perspective.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Guest Book</h2>
+    <form class="form-card" action="#" method="post">
+      <div class="grid">
+        <label for="first">First Name</label>
+        <input id="first" name="first" type="text" required>
+
+        <label for="last">Last Name</label>
+        <input id="last" name="last" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="city">City</label>
+        <input id="city" name="city" type="text">
+
+        <label for="state">State</label>
+        <select id="state" name="state" required>
+          <option value="">Choose…</option>
+          <option>MA</option><option>NH</option><option>VT</option>
+          <option>CT</option><option>RI</option><option>ME</option>
+        </select>
+
+        <div class="actions">
+          <button type="submit">Sign Guest Book</button>
+        </div>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
